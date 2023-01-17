@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calculatrice</title>
+  </head>
+  <body>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="calculator.html">Calculator</a></li>
+    </ul>
+    X<input type="text" name="" id="X" />
+    <br />
+    Y<input type="text" name="" id="Y" />
+    <button onclick="ADD()">+</button>
+    <button onclick="Subtraction()">-</button>
+    <button onclick="Multiplication()">*</button>
+    <button onclick="Division()">/</button>
+    <h3></h3>
+    
+    <script>
+      let x = document.querySelector("#X");
+      let y = document.querySelector("#Y");
+      function ADD() {
+        document.querySelector("h3").innerHTML = somme(
+          Number(x.value),
+          Number(y.value)
+        );
+      }
+      
+      function Subtraction() {
+        document.querySelector("h3").innerHTML = moins(
+          Number(x.value),
+          Number(y.value)
+        );
+      }
+
+      function Multiplication() {
+        document.querySelector("h3").innerHTML = multi(
+          Number(x.value),
+          Number(y.value)
+        );
+      }
+
+      function Division() {
+        document.querySelector("h3").innerHTML = div(
+          Number(x.value),
+          Number(y.value)
+        );
+      }
+
+      function somme(x, y) {
+        return (x + y);
+      }
+      function multi(x, y) {
+        return  (x * y);
+      }
+      function moins(x, y) {
+        return  (x - y);
+      }
+      function div(x, y) {
+        return  (x / y);
+      }
+
+    </script>
+  </body>
+</html>
